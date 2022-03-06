@@ -1,7 +1,10 @@
 ## Author:
 
-Matěj Hrabálek
-FEEC BUT IT security student
+<b>Name:</b> Matěj Hrabálek
+<b>Age:</b> 21
+<b>City:</b> Brno
+<b>Student:</b> FEEC BUT IT security
+<b>Job:</b> Security Operations Center, L1 Analyst
 
 ## Project:
 
