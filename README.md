@@ -2,13 +2,13 @@
 
 <b>Name:</b> Matěj Hrabálek.<br>
 <b>Age:</b> 21.<br>
-<b>City:</b> Brno\n
-<b>Student:</b> FEEC BUT IT security
-<b>Job:</b> Security Operations Center, L1 Analyst
+<b>City:</b> Brno<br>
+<b>Student:</b> FEEC BUT IT security<br>
+<b>Job:</b> Security Operations Center, L1 Analyst<br>
 
 ## Project:
 
-This application was made for BPC-OOP (Objected-oriented programming) course, summer semester 2021/22, on FEEC BUT, Department of Telecommunications.
+This Java application was made for BPC-OOP (Objected-oriented programming) course, summer semester 2021/22, on FEEC BUT, Department of Telecommunications.
 
 <b>Assignment in Czech language:</b>
 
