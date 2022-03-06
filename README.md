@@ -1,8 +1,8 @@
 ## Author:
 
-<b>Name:</b> Matěj Hrabálek
-<b>Age:</b> 21
-<b>City:</b> Brno
+<b>Name:</b> Matěj Hrabálek.<br>
+<b>Age:</b> 21.<br>
+<b>City:</b> Brno\n
 <b>Student:</b> FEEC BUT IT security
 <b>Job:</b> Security Operations Center, L1 Analyst
 
