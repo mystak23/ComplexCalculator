@@ -66,6 +66,16 @@
             <Button fx:id="importToAButton" layoutX="20.0" layoutY="22.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Import to A from CSV" />
             <Button fx:id="importToBButton" layoutX="183.0" layoutY="20.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Import to B from CSV" />
             <Button fx:id="showResultsButton" layoutX="392.0" layoutY="416.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" text="Show CSV result" />
+            <Button fx:id="resetBButton" layoutX="289.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="Reset">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetAButton" layoutX="20.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="Reset">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

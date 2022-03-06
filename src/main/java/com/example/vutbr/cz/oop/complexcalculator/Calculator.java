@@ -105,11 +105,34 @@ public class Calculator implements Initializable {
     private TextField importBline;
     @FXML
     private Button showResultsButton;
+    @FXML
+    private Button resetAButton;
+    @FXML
+    private Button resetBButton;
 
     private static Complex resultComplex;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        resetAButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+
+            @Override
+            public void handle(javafx.event.ActionEvent event) {
+                aRealPart.clear();
+                aImaginaryPart.clear();
+            }
+        });
+
+        resetBButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
+
+            @Override
+            public void handle(javafx.event.ActionEvent event) {
+                bRealPart.clear();
+                bImaginaryPart.clear();
+            }
+        });
+
 
         addButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
 
@@ -356,6 +379,7 @@ public class Calculator implements Initializable {
             @Override
             public void handle(javafx.event.ActionEvent event) {
                 Methods.memorySave(resultComplex, saved1, saved2, saved3, saved4, saved5);
+                resultComplex = null;
             }
         });
 
@@ -364,6 +388,7 @@ public class Calculator implements Initializable {
             @Override
             public void handle(javafx.event.ActionEvent event) {
                 Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC1(), saved1);
+                MemorySave.setC1(null);
             }
         });
 
@@ -372,6 +397,7 @@ public class Calculator implements Initializable {
             @Override
             public void handle(javafx.event.ActionEvent event) {
                 Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC1(), saved1);
+                MemorySave.setC1(null);
             }
         });
 
@@ -379,7 +405,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC2(), saved1);
+                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC2(), saved2);
+                MemorySave.setC2(null);
             }
         });
 
@@ -387,7 +414,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC2(), saved1);
+                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC2(), saved2);
+                MemorySave.setC2(null);
 
             }
         });
@@ -396,8 +424,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC3(), saved1);
-
+                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC3(), saved3);
+                MemorySave.setC3(null);
             }
         });
 
@@ -405,7 +433,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC3(), saved1);
+                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC3(), saved3);
+                MemorySave.setC3(null);
             }
         });
 
@@ -413,7 +442,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC4(), saved1);
+                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC4(), saved4);
+                MemorySave.setC4(null);
             }
         });
 
@@ -421,7 +451,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC4(), saved1);
+                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC4(), saved4);
+                MemorySave.setC4(null);
             }
         });
 
@@ -429,7 +460,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC5(), saved1);
+                Methods.useMemory(aRealPart, aImaginaryPart, MemorySave.getC5(), saved5);
+                MemorySave.setC5(null);
             }
         });
 
@@ -437,7 +469,8 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC5(), saved1);
+                Methods.useMemory(bRealPart, bImaginaryPart, MemorySave.getC5(), saved5);
+                MemorySave.setC5(null);
             }
         });
 
@@ -489,6 +522,9 @@ public class Calculator implements Initializable {
                 try {
                     if (resultComplex != null) {
                         CSVSave.setComplex(resultComplex);
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setContentText("Complex number exported!");
+                        alert.show();
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Wrong input.");
