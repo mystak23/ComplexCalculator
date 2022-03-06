@@ -1,15 +1,17 @@
-<h1 align="center">Author: Matěj Hrabálek</h1>
-<h3 align="center">FEEC BUT IT security student</h3>
+## Author:
 
-# Project:
+Matěj Hrabálek
+FEEC BUT IT security student
+
+## Project:
 
 This application was made for BPC-OOP (Objected-oriented programming) course, summer semester 2021/22, on FEEC BUT, Department of Telecommunications.
 
-Assignment in Czech language:
+<b>Assignment in Czech language:</b>
 
 <img width="538" alt="Snímek obrazovky 2022-03-06 v 12 52 45" src="https://user-images.githubusercontent.com/83549436/156921862-2e313d4c-ecec-4821-a1a3-e9bc45b1cc34.png">
 
-# Program description:
+## Program description:
 
 Simple JavaFX GUI calculator for Complex Numbers. 
 User inputs two complexs and can do some complex operations, converse them to algebraic, goniometric or exponential. User can also save some results to memory or attached CSV file.
@@ -26,7 +28,7 @@ git clone https://github.com/mystak23/ComplexCalculator.git
 ```
 
 ## License
-No license
+No license.
 
 ## Connect with me:
 <p align="left">
