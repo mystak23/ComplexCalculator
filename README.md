@@ -15,10 +15,9 @@ This application was made for BPC-OOP (Objected-oriented programming) course, su
 
 Simple JavaFX GUI calculator for Complex Numbers. 
 User inputs two complex numbers and can do some complex operations, converse them to algebraic, goniometric or exponential. 
-User can also save some results to memory or to attached CSV file.
+User can also save some results to memory or to attached CSV file.!
 
-[Uploading Snímek obrazovky 2022-03-06 v 12.56.40.png…]()
-
+<img width="542" alt="Snímek obrazovky 2022-03-06 v 12 59 41" src="https://user-images.githubusercontent.com/83549436/156922083-732381ee-da08-49a5-8ece-1ba8ba9bd2b0.png">
 
 ## Installation
 
