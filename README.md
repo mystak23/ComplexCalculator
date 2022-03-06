@@ -22,7 +22,7 @@ User can also save some results to memory or to attached CSV file.!
 
 <img width="542" alt="Snímek obrazovky 2022-03-06 v 12 59 41" src="https://user-images.githubusercontent.com/83549436/156922083-732381ee-da08-49a5-8ece-1ba8ba9bd2b0.png">
 
-## Installation
+## Installation:
 
 You must install at least Java 11 and JavaFX 18.
 IDE IntelliJ IDEA Community edition is recommended.
@@ -32,7 +32,7 @@ cd <your_repository>
 git clone https://github.com/mystak23/ComplexCalculator.git
 ```
 
-## License
+## License:
 No license.
 
 ## Connect with me:
