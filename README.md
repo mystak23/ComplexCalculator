@@ -1,6 +1,28 @@
 <h1 align="center">Author: Matěj Hrabálek</h1>
 <h3 align="center">FEEC BUT IT security student</h3>
 
+# Foobar
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use Java 11, JavaFX 18 and IntelliJ IDEA Community edition.
+
+```bash
+cd <your_repository>
+git clone https://github.com/mystak23/ComplexCalculator/
+```
+
+
+
+## License
+No license
+
+<h3 align="left">Connect with me:</h3>
+<p align="left"> 
+</p
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/mystak23" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="mystak23" height="30" width="40" /></a>
