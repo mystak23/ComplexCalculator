@@ -16,15 +16,15 @@ This Java application was made for BPC-OOP (Objected-oriented programming) cours
 
 ## Program description:
 
-Simple JavaFX GUI calculator for Complex Numbers. 
-User inputs two complex numbers and can do some complex operations, converse them to algebraic, goniometric or exponential. 
-User can also save some results to memory or to attached CSV file.!
+Simple JavaFX GUI calculator for Complex Numbers.<br>
+User inputs two complex numbers and can do some complex operations, converse them to algebraic, goniometric or exponential.<br>
+User can also save some results to memory or to attached CSV file.
 
 <img width="542" alt="Snímek obrazovky 2022-03-06 v 12 59 41" src="https://user-images.githubusercontent.com/83549436/156922083-732381ee-da08-49a5-8ece-1ba8ba9bd2b0.png">
 
 ## Installation:
 
-You must install at least Java 11 and JavaFX 18.
+You must install at least Java 11 and JavaFX 18.<br>
 IDE IntelliJ IDEA Community edition is recommended.
 
 ```bash
