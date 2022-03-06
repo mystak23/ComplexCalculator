@@ -5,19 +5,17 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import javafx.scene.control.Alert;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class CSVSave {
 
-    private static final String FILE_NAME = "complex.csv";
-    private static Complex complex;
+    private static final String FILE_NAME = "complex.csv"; //prints into this file
+    private static Complex complex; //saved complex
 
-    public static Complex getComplex() {
+    //import to file and to memory
+    public static Complex importComplex() {
         CSVReader reader = null;
         try {
             reader = new CSVReader(new FileReader(FILE_NAME));
@@ -31,10 +29,11 @@ public class CSVSave {
                 i.getMessage();
             }
         }
-       return complex;
+        return complex;
     }
 
-    public static void setComplex(Complex complex) {
+    //export from memory and from file
+    public static void exportComplex(Complex complex) {
         CSVWriter writer = null;
         CSVSave.complex = complex;
         if (complex == null) {
@@ -55,6 +54,7 @@ public class CSVSave {
         }
     }
 
+    //prints into alert
     public static void showCsvResults() {
         if (complex != null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

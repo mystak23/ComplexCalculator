@@ -4,6 +4,7 @@ import javafx.scene.control.Alert;
 
 public class ExceptionHandling {
 
+    //prints exception
     public static void showException(String reason) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText(reason);

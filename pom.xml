@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example.vutbr.cz.oop</groupId>
-    <artifactId>ComplexCaltulator</artifactId>
+    <artifactId>ComplexCalculator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>ComplexCaltulator</name>
+    <name>ComplexCalculator</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>11.0.14.1</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>

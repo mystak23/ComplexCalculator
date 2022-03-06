@@ -98,11 +98,7 @@ public class Calculator implements Initializable {
     @FXML
     private Button importToAButton;
     @FXML
-    private TextField importAline;
-    @FXML
     private Button importToBButton;
-    @FXML
-    private TextField importBline;
     @FXML
     private Button showResultsButton;
     @FXML
@@ -110,7 +106,7 @@ public class Calculator implements Initializable {
     @FXML
     private Button resetBButton;
 
-    private static Complex resultComplex;
+    private static Complex resultComplex; //saved complex
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -119,8 +115,7 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                aRealPart.clear();
-                aImaginaryPart.clear();
+                aRealPart.clear(); aImaginaryPart.clear(); aComplexNumber.clear();
             }
         });
 
@@ -128,8 +123,7 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                bRealPart.clear();
-                bImaginaryPart.clear();
+                bRealPart.clear(); bImaginaryPart.clear(); bComplexNumber.clear();
             }
         });
 
@@ -142,8 +136,7 @@ public class Calculator implements Initializable {
                     Complex c1 = new Complex(Double.parseDouble(aRealPart.getText()), Double.parseDouble(aImaginaryPart.getText()));
                     Complex c2 = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     Complex c = ComplexOperation.add(c1, c2);
-                    aComplexNumber.setText(c1.toString());
-                    bComplexNumber.setText(c2.toString());
+                    aComplexNumber.setText(c1.toString()); bComplexNumber.setText(c2.toString());
                     result.setText(c.toString());
                     resultComplex = c;
                 } catch (NumberFormatException e) {
@@ -161,8 +154,7 @@ public class Calculator implements Initializable {
                     Complex c1 = new Complex(Double.parseDouble(aRealPart.getText()), Double.parseDouble(aImaginaryPart.getText()));
                     Complex c2 = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     Complex c = ComplexOperation.deduct(c1, c2);
-                    aComplexNumber.setText(c1.toString());
-                    bComplexNumber.setText(c2.toString());
+                    aComplexNumber.setText(c1.toString()); bComplexNumber.setText(c2.toString());
                     result.setText(c.toString());
                     resultComplex = c;
                 } catch (NumberFormatException e) {
@@ -180,8 +172,7 @@ public class Calculator implements Initializable {
                     Complex c1 = new Complex(Double.parseDouble(aRealPart.getText()), Double.parseDouble(aImaginaryPart.getText()));
                     Complex c2 = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     Complex c = ComplexOperation.multiply(c1, c2);
-                    aComplexNumber.setText(c1.toString());
-                    bComplexNumber.setText(c2.toString());
+                    aComplexNumber.setText(c1.toString()); bComplexNumber.setText(c2.toString());
                     result.setText(c.toString());
                     resultComplex = c;
                 } catch (NumberFormatException e) {
@@ -199,8 +190,7 @@ public class Calculator implements Initializable {
                     Complex c1 = new Complex(Double.parseDouble(aRealPart.getText()), Double.parseDouble(aImaginaryPart.getText()));
                     Complex c2 = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     Complex c = ComplexOperation.divide(c1, c2);
-                    aComplexNumber.setText(c1.toString());
-                    bComplexNumber.setText(c2.toString());
+                    aComplexNumber.setText(c1.toString()); bComplexNumber.setText(c2.toString());
                     result.setText(c.toString());
                     resultComplex = c;
                 } catch (NumberFormatException e) {
@@ -315,7 +305,6 @@ public class Calculator implements Initializable {
                     double absoluteValue = c.getAbsoluteValue();
                     aComplexNumber.setText(c.toString());
                     result.setText(String.valueOf(absoluteValue));
-                    resultComplex = c;
                 } catch (NumberFormatException e) {
                     ExceptionHandling.showException("Wrong input");
                     System.out.println(e.getMessage());
@@ -331,8 +320,7 @@ public class Calculator implements Initializable {
                     Complex c = new Complex(Double.parseDouble(aRealPart.getText()), Double.parseDouble(aImaginaryPart.getText()));
                     double angle = c.getArgument();
                     aComplexNumber.setText(c.toString());
-                    result.setText(String.valueOf(angle));
-                    resultComplex = c;
+                    result.setText(angle + " rad");
                 } catch (NumberFormatException e) {
                     ExceptionHandling.showException("Wrong input");
                     System.out.println(e.getMessage());
@@ -347,7 +335,6 @@ public class Calculator implements Initializable {
                 try {
                     Complex c = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     double absoluteValue = c.getAbsoluteValue();
-                    resultComplex = c;
                     bComplexNumber.setText(c.toString());
                     result.setText(String.valueOf(absoluteValue));
                 } catch (NumberFormatException e) {
@@ -365,8 +352,7 @@ public class Calculator implements Initializable {
                     Complex c = new Complex(Double.parseDouble(bRealPart.getText()), Double.parseDouble(bImaginaryPart.getText()));
                     double angle = c.getArgument();
                     bComplexNumber.setText(c.toString());
-                    result.setText(String.valueOf(angle));
-                    resultComplex = c;
+                    result.setText(angle + " rad");
                 } catch (NumberFormatException e) {
                     ExceptionHandling.showException("Wrong input");
                     System.out.println(e.getMessage());
@@ -378,8 +364,12 @@ public class Calculator implements Initializable {
 
             @Override
             public void handle(javafx.event.ActionEvent event) {
-                Methods.memorySave(resultComplex, saved1, saved2, saved3, saved4, saved5);
-                resultComplex = null;
+                if (resultComplex != null) {
+                    Methods.memorySave(resultComplex, saved1, saved2, saved3, saved4, saved5);
+                    resultComplex = null;
+                } else {
+                    ExceptionHandling.showException("Cannot save absolute value or angle!");
+                }
             }
         });
 
@@ -521,14 +511,12 @@ public class Calculator implements Initializable {
             public void handle(javafx.event.ActionEvent event) {
                 try {
                     if (resultComplex != null) {
-                        CSVSave.setComplex(resultComplex);
+                        CSVSave.exportComplex(resultComplex);
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setContentText("Complex number exported!");
                         alert.show();
                     } else {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("Wrong input.");
-                        alert.show();
+                        ExceptionHandling.showException("Wrong input. Try again.");
                     }
                 } catch (NumberFormatException e) {
                     ExceptionHandling.showException("Error occured.");
@@ -549,5 +537,6 @@ public class Calculator implements Initializable {
                 }
             }
         });
+
     }
 }

@@ -4,12 +4,14 @@ import com.example.vutbr.cz.oop.complexcalculator.ComplexNumber.Complex;
 
 public class MemorySave {
 
+    //saved complex numbers
     private static Complex c1;
     private static Complex c2;
     private static Complex c3;
     private static Complex c4;
     private static Complex c5;
 
+    //getters and setters
     public static Complex getC1() {
         return c1;
     }
