@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="calculatorVBox" alignment="CENTER" fillWidth="false" focusTraversable="true" pickOnBounds="false" prefHeight="600" prefWidth="600" snapToPixel="false" spacing="25.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vutbr.cz.oop.complexcalculator.Calculator">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label prefHeight="92.0" prefWidth="370.0" text="COMPLEX NUMBER CALCULATOR">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="493.0" prefWidth="533.0">
+         <children>
+            <Label layoutX="343.0" layoutY="454.0" text="Matěj Hrabálek - BPC-OOP project" />
+            <Label layoutX="66.0" layoutY="62.0" text="Complex A:" />
+            <Label layoutX="221.0" layoutY="62.0" text="Complex B:" />
+            <Button fx:id="swapButton" layoutX="152.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="50.0" text="Swap" />
+            <TextField fx:id="aRealPart" layoutX="20.0" layoutY="87.0" prefHeight="27.0" prefWidth="74.0" promptText="Real" />
+            <TextField fx:id="aImaginaryPart" layoutX="98.0" layoutY="87.0" prefHeight="27.0" prefWidth="74.0" promptText="Imaginary" />
+            <TextField fx:id="bRealPart" layoutX="178.0" layoutY="87.0" prefHeight="27.0" prefWidth="74.0" promptText="Real" />
+            <TextField fx:id="bImaginaryPart" layoutX="256.0" layoutY="87.0" prefHeight="27.0" prefWidth="74.0" promptText="Imaginary" />
+            <Button fx:id="addButton" layoutX="25.0" layoutY="141.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="50.0" text="A + B" />
+            <Button fx:id="deductButton" layoutX="112.0" layoutY="141.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="50.0" text="A - B" />
+            <Button fx:id="multiplyButton" layoutX="188.0" layoutY="140.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" text="A * B" />
+            <Button fx:id="divideButton" layoutX="269.0" layoutY="140.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="48.0" text="A / B" />
+            <Button fx:id="aToAlgebraicButton" layoutX="26.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="A to algebraic" />
+            <Button fx:id="aToExponentialButton" layoutX="26.0" layoutY="290.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="A to exponential" />
+            <Button fx:id="aToGoniometricButton" layoutX="26.0" layoutY="239.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="135.0" text="A to goniometric" />
+            <Button fx:id="bToExponentialButton" layoutX="188.0" layoutY="290.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="B to exponential" />
+            <Button fx:id="bToGoniometricButton" layoutX="188.0" layoutY="239.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="B to goniometric" />
+            <Button fx:id="bToAlgebraicButton" layoutX="188.0" layoutY="190.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="B to algebraic" />
+            <Button fx:id="aAbsoluteValueButton" layoutX="24.0" layoutY="337.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="46.0" text="| A |" />
+            <Button fx:id="aAngleButton" layoutX="111.0" layoutY="337.0" mnemonicParsing="false" text="Angle" />
+            <Button fx:id="bAbsoluteValueButton" layoutX="186.0" layoutY="337.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="46.0" text="| B |" />
+            <Button fx:id="bAngleButton" layoutX="268.0" layoutY="337.0" mnemonicParsing="false" text="Angle" />
+            <TextField fx:id="aComplexNumber" editable="false" layoutX="57.0" layoutY="378.0" prefHeight="27.0" prefWidth="81.0" promptText="Complex A" />
+            <TextField fx:id="bComplexNumber" editable="false" layoutX="212.0" layoutY="378.0" prefHeight="27.0" prefWidth="81.0" promptText="Complex B" />
+            <TextField fx:id="result" editable="false" layoutX="27.0" layoutY="416.0" prefHeight="27.0" prefWidth="298.0" promptText="Result" />
+            <Button fx:id="saveResultButton" layoutX="27.0" layoutY="450.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Save result" />
+            <Button fx:id="exportResultButton" layoutX="183.0" layoutY="450.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Export result to CSV" />
+            <Label layoutX="414.0" layoutY="12.0" prefHeight="17.0" prefWidth="81.0" text="Saved results:" />
+            <TextField fx:id="saved1" editable="false" layoutX="375.0" layoutY="36.0" prefHeight="27.0" prefWidth="151.0" promptText="1" />
+            <Button fx:id="use1asAButton" layoutX="374.0" layoutY="74.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as A" />
+            <Button fx:id="use1asBButton" layoutX="454.0" layoutY="74.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as B" />
+            <TextField fx:id="saved2" editable="false" layoutX="375.0" layoutY="114.0" prefHeight="27.0" prefWidth="151.0" promptText="2" />
+            <Button fx:id="use2asAButton" layoutX="374.0" layoutY="151.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as A" />
+            <Button fx:id="use2asBButton" layoutX="454.0" layoutY="151.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as B" />
+            <TextField fx:id="saved3" editable="false" layoutX="375.0" layoutY="190.0" prefHeight="27.0" prefWidth="151.0" promptText="3" />
+            <Button fx:id="use3asAButton" layoutX="374.0" layoutY="227.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as A" />
+            <Button fx:id="use3asBButton" layoutX="454.0" layoutY="227.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as B" />
+            <TextField fx:id="saved4" editable="false" layoutX="375.0" layoutY="266.0" prefHeight="27.0" prefWidth="151.0" promptText="4" />
+            <Button fx:id="use4asAButton" layoutX="374.0" layoutY="304.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as A" />
+            <Button fx:id="use4asBButton" layoutX="454.0" layoutY="304.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as B" />
+            <TextField fx:id="saved5" editable="false" layoutX="375.0" layoutY="344.0" prefHeight="27.0" prefWidth="151.0" promptText="5" />
+            <Button fx:id="use5asAButton" layoutX="374.0" layoutY="378.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as A" />
+            <Button fx:id="use5asBButton" layoutX="454.0" layoutY="378.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="Use as B" />
+            <Button fx:id="importToAButton" layoutX="20.0" layoutY="22.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Import to A from CSV" />
+            <Button fx:id="importToBButton" layoutX="183.0" layoutY="20.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="142.0" text="Import to B from CSV" />
+            <Button fx:id="showResultsButton" layoutX="392.0" layoutY="416.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" text="Show CSV result" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
