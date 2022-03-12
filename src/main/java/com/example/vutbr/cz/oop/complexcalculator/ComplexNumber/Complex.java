@@ -7,8 +7,8 @@ import java.text.DecimalFormat;
 
 public class Complex {
 
-    private final double realPart;
-    private final double imaginaryPart;
+    private double realPart;
+    private double imaginaryPart;
 
     //returns |C|
     public double getAbsoluteValue() {
