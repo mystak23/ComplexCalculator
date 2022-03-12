@@ -1,14 +1,14 @@
 ## Author:
 
-<b>Name:</b> Matěj Hrabálek.<br>
-<b>Age:</b> 21.<br>
+<b>Name:</b> Matěj Hrabálek<br>
+<b>Age:</b> 21<br>
 <b>City:</b> Brno<br>
 <b>Student:</b> FEEC BUT IT security<br>
 <b>Job:</b> Security Operations Center, L1 Analyst<br>
 
 ## Project:
 
-This Java application was made for BPC-OOP (Objected-oriented programming) course, summer semester 2021/22, on FEEC BUT, Department of Telecommunications.
+This Java application was made for BPC-OOP (Object-oriented programming) course, summer semester 2021/22, on FEEC BUT, Department of Telecommunications.
 
 <b>Assignment in Czech language:</b>
 
@@ -17,7 +17,7 @@ This Java application was made for BPC-OOP (Objected-oriented programming) cours
 ## Program description:
 
 Simple JavaFX GUI calculator for Complex Numbers.<br>
-User inputs two complex numbers and can do some complex operations, converse them to algebraic, goniometric or exponential.<br>
+User inputs two complex numbers and can do some complex operations, convert them to algebraic, goniometric or exponential string.<br>
 User can also save some results to memory or to attached CSV file.
 
 <img width="542" alt="Snímek obrazovky 2022-03-06 v 12 59 41" src="https://user-images.githubusercontent.com/83549436/156922083-732381ee-da08-49a5-8ece-1ba8ba9bd2b0.png">
@@ -25,7 +25,7 @@ User can also save some results to memory or to attached CSV file.
 ## Installation:
 
 You must install at least Java 11 and JavaFX 18.<br>
-IDE IntelliJ IDEA Community edition is recommended.
+IDE IntelliJ IDEA Community Edition is recommended.
 
 ```bash
 cd <your_repository>
